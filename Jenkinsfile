@@ -5,19 +5,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building application...'
+                sh 'gcc -Wall -Wextra -O2 src/main.c -o application'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
+                sh './tests/test.sh'
             }
         }
     }
