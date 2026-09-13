@@ -2,7 +2,7 @@
 
 output=$(./application)
 
-if [ "$output" = "HelLlo from Jenkins CI!" ]; then
+if [ "$output" = "Hello from Jenkins CI!" ]; then
     echo "TEST PASSED"
     exit 0
 else
