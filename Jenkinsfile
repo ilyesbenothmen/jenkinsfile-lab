@@ -21,6 +21,13 @@ pipeline {
 	    }
 	}*/
 
+        stage('Python Coverage') {
+ 	   steps {
+        	sh 'coverage run --source=python -m pytest tests/test_calculator.py'
+        	sh 'coverage xml'
+    	   }
+	}
+
         stage('SonarQube Analysis') {
             steps {
                 script {
