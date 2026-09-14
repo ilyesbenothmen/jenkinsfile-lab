@@ -15,5 +15,5 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero")
     return a / b
 
-//def unused_function():
-//    unused_variable = 123
+#//def unused_function():
+#//    unused_variable = 123
