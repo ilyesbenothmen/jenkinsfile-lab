@@ -14,6 +14,12 @@ pipeline {
                 sh './tests/test.sh'
             }
         }
+        
+        stage('Python Syntax Check') {
+ 	   steps {
+               sh 'python3 -m py_compile python/calculator.py'
+	    }
+	}
 
         stage('SonarQube Analysis') {
             steps {
