@@ -17,3 +17,6 @@ def divide(a, b):
 
 #//def unused_function():
 #//    unused_variable = 123
+
+def unused_function():
+    unused_variable = 123
